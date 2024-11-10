@@ -17,11 +17,11 @@ export default function App() {
   if (!font) {
     return <AppLoading />;
   }
-  
+
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar />
-      <Cest {...mock}/>
+      <Cest {...mock} />
     </SafeAreaView>
   );
 }
