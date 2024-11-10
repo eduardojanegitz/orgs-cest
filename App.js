@@ -6,6 +6,7 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 import mock from "./src/mocks/cest";
+import AppLoading from "expo-app-loading";
 
 export default function App() {
   const [font] = useFonts({
@@ -14,7 +15,7 @@ export default function App() {
   });
 
   if (!font) {
-    return <View />;
+    return <AppLoading />;
   }
   
   return (
