@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import top from "../../assets/topo.png";
 import logo from "../../assets/logo.png";
+import CustomText from "../components/CustomText";
 
 // Função utilizada para pegar o tamanho da tela
 const width = Dimensions.get("screen").width;
@@ -18,19 +19,19 @@ const Cest = () => {
     <>
       <SafeAreaView>
         <Image source={top} style={styles.top} />
-        <Text style={styles.title}>Detalhes da Cesta</Text>
+        <CustomText style={styles.title}>Detalhes da Cesta</CustomText>
 
         <View style={styles.cest}>
-          <Text style={styles.name}>Cesta de Verduras</Text>
+          <CustomText style={styles.name}>Cesta de Verduras</CustomText>
           <View style={styles.farm}>
             <Image style={styles.imageFarm} source={logo} />
-            <Text style={styles.nameFarm}>Jenny Jack Farm</Text>
+            <CustomText style={styles.nameFarm}>Jenny Jack Farm</CustomText>
           </View>
-          <Text style={styles.description}>
+          <CustomText style={styles.description}>
             Uma cesta com produtos selecionados cuidadosamente da fazenda direto
             para a sua cozinha.
-          </Text>
-          <Text style={styles.price}>R$40,00</Text>
+          </CustomText>
+          <CustomText style={styles.price}>R$40,00</CustomText>
         </View>
       </SafeAreaView>
     </>
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     fontWeight: "bold",
-    fontFamily: "MontserratBold"
   },
   farm: {
     flexDirection: "row",
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,
-    fontFamily: "MontserratRegular"
   },
   description: {
     color: "#A3A3A3",
