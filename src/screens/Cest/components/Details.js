@@ -1,21 +1,23 @@
 import React from "react";
 import CustomText from "../../../components/CustomText";
 import { Image, StyleSheet, View } from "react-native";
-import logo from "../../../../assets/logo.png";
 
-export default function Details() {
+export default function Details({
+  name,
+  farmName,
+  farmLogo,
+  description,
+  price,
+}) {
   return (
     <>
-      <CustomText style={styles.name}>Cesta de Verduras</CustomText>
+      <CustomText style={styles.name}>{name}</CustomText>
       <View style={styles.farm}>
-        <Image style={styles.imageFarm} source={logo} />
-        <CustomText style={styles.nameFarm}>Jenny Jack Farm</CustomText>
+        <Image style={styles.imageFarm} source={farmLogo} />
+        <CustomText style={styles.farmName}>{farmName}</CustomText>
       </View>
-      <CustomText style={styles.description}>
-        Uma cesta com produtos selecionados cuidadosamente da fazenda direto
-        para a sua cozinha.
-      </CustomText>
-      <CustomText style={styles.price}>R$40,00</CustomText>
+      <CustomText style={styles.description}>{description}</CustomText>
+      <CustomText style={styles.price}>{price}</CustomText>
     </>
   );
 }
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
   },
-  nameFarm: {
+  farmName: {
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,

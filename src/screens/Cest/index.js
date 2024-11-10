@@ -1,21 +1,16 @@
 import React from "react";
-import {
-  Image,
-  SafeAreaView,
-  StyleSheet,
-  View,
-} from "react-native";
+import { Image, SafeAreaView, StyleSheet, View } from "react-native";
 
 import Top from "./components/Top";
 import Details from "./components/Details";
 
-const Cest = () => {
+const Cest = ({ top, details }) => {
   return (
     <>
       <SafeAreaView>
-        <Top />
+        <Top {...top} />
         <View style={styles.cest}>
-          <Details />
+          <Details {...details}/>
         </View>
       </SafeAreaView>
     </>
@@ -28,8 +23,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
   },
-
-  
 });
 
 export default Cest;
